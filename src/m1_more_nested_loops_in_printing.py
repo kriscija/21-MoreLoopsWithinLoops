@@ -39,15 +39,19 @@ def run_test_triangle_right_justified():
 
 def triangle_right_justified(r):
     x = 1
-    y = 1
+
     for i in range(r):
         for k in range(r-x):
             print(' ',end='')
-            x= x+1
+
+        for s in range(x):
+            print (s+1,end = '')
+        x = x + 1
+        print()
 
 
-        
-        y = y
+
+
     """
     Prints a triangle of numbers, with r rows.
     It looks the same as a previous example, but right-justified.
