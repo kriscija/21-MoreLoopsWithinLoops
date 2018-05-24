@@ -69,7 +69,7 @@ def triangle_right_justified(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # doneTODO: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -110,7 +110,19 @@ def run_test_triangle_upside_down():
 
 
 def triangle_upside_down(r):
-    """
+    x = 0
+
+    for i in range(r):
+        for k in range(x):
+            print(' ', end='')
+
+        for s in range(r-x):
+            print(s + 1, end='')
+        x = x + 1
+        print()
+
+
+"""
     Prints a triangle of numbers, with r rows.
     It looks the same as the previous problem,
     but with rows in reversed order.  For example, when r = 5:
@@ -175,7 +187,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DoneTODO: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -206,6 +218,12 @@ def run_test_numbers_constant_forward():
 
 
 def numbers_constant_forward(r, maxnum, n):
+    for k in range(r):
+        for x in range(1,maxnum+1):
+            for z in range(n):
+                print(x,end='')
+            print(' ',end='')
+        print()
     """
     Prints a rectangle of numbers, with r rows.
     Each row has n 1s, then a space, then n 2s,
@@ -231,7 +249,7 @@ def numbers_constant_forward(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DoneTODO: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
@@ -264,6 +282,12 @@ def run_test_numbers_constant_backwards():
 
 
 def numbers_constant_backwards(r, maxnum, n):
+    for k in range(r):
+        for x in range(maxnum,0,-1):
+            for z in range(n,0,-1):
+                print(x,end='')
+            print(' ',end='')
+        print()
     """
     Prints a rectangle of numbers, with r rows.
     It looks the same as the previous problem, but with
@@ -275,7 +299,7 @@ def numbers_constant_backwards(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    #DoneTODO: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -309,6 +333,16 @@ def run_test_numbers_increasing_forward():
 
 
 def numbers_increasing_forward(r, maxnum):
+    y = maxnum
+    for k in range(r):
+        for x in range(1,maxnum+1):
+            for z in range(maxnum-y+1):
+                print(x, end='')
+
+            print(' ', end='')
+            y = y - 1
+        y = maxnum
+        print()
     """
     Prints a rectangle of numbers, with r rows, as in the previous
     two problems.  But now each row has one 1, two 2s, three 3s,
@@ -327,7 +361,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DoneTODO: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
